@@ -16,8 +16,6 @@ def isImage(image):
         return False
 
 def resize_image(source, size) :				#size[0], size[1] represent the new height and width respectively
-	#size = cv.GetSize(source)
-#	print size[0], size[1]
     thumbnail = cv.CreateImage((size[0], size[1]), source.depth, source.nChannels)
     cv.Resize(source, thumbnail, interpolation = cv.CV_INTER_CUBIC);
     return thumbnail
